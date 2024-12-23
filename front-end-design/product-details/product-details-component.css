@@ -1,0 +1,154 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.detailsButton {
+   color: white;             
+   padding: 12px 24px;         
+   border: none;               
+   border-radius: 8px;         
+   font-size: 16px;            
+   font-weight: bold;          
+   text-transform: uppercase;  
+   cursor: pointer;            
+   transition: background-color 0.3s, box-shadow 0.3s; 
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+  
+.detailsButton:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+  
+.detailsButton:active {
+  opacity: 0.8; 
+}
+  
+#addToWishlistButton {
+background-color: #e74c3c;
+}
+  
+#addToWishlistButton:hover {
+  background-color: #c0392b;
+}
+  
+#addToCartButton {
+  background-color: #1cddff;
+}
+  
+#addToCartButton:hover {
+  background-color: #13b0c5;
+}
+    
+#buyButton {
+  background-color: #2ecc71;
+}
+  
+#buyButton:hover {
+  background-color: #27ae60;
+}
+
+#productDetails{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15%;
+    margin: 100px;
+}
+
+#productInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+#productInfo h2{
+    align-self: center;
+}
+
+#actionButtons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (max-width:1440px){
+    .productImage img{
+        width: 350px;
+        height: 500px;
+    }
+    #productDetails{
+        gap: 10%;
+    }
+    #productInfo{
+      font-size: 15px;
+    }
+}
+
+@media (max-width:1240px){
+    .productImage img{
+        width: 250px;
+        height: 400px;
+    }
+    #productDetails{
+        gap: 10%;
+    }
+    #productInfo{
+      font-size: 10px;
+    }
+}
+
+@media (max-width:1024px){
+  .productImage img{
+      width: 200px;
+      height: 300px;
+  }
+  #productDetails{
+      gap: 8%;
+  }
+  #productInfo{
+    font-size: 10px;
+  }
+  .detailsButton{
+    font-size: 10px;
+  }
+}
+
+@media (max-width:840px){
+  .productImage img{
+      width: 150px;
+      height: 200px;
+  }
+  #productDetails{
+      gap: 8%;
+  }
+  #productInfo{
+    font-size: 10px;
+  }
+  .detailsButton{
+    font-size: 8px;
+    padding: 10px;
+  }
+  #productInfo{
+    font-size: 7px;
+  }
+}
+
+@media (max-width:640px){
+  #productDetails{
+    flex-direction: column;
+  }
+  .productImage img{
+      width: 250px;
+      height: 350px;
+  }
+  #productDetails{
+    margin: 30px;
+  }
+}
+
+@media (max-width:425px){
+  .productImage img{
+      width: 200px;
+      height: 300px;
+  }
+}

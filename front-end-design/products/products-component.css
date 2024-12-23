@@ -1,0 +1,50 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.productCard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px; 
+    padding: 20px;
+    background: #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 5px;
+    flex: 0 0 calc(25% - 20px);
+    margin: 10px;
+}
+
+.productCard h5{
+    margin: 5px;
+}
+
+.productImage{
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    justify-content: center;
+}
+
+.productImage img{
+    width:auto;
+    height:auto;
+    max-height: 250px;
+    min-height: 100px;
+}
+
+#productSection{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+    justify-content: space-around;
+}
+
+@media (max-width: 1640px){
+    .productImage img{
+        max-height: 200px;
+        min-height: 80px;
+    }
+}

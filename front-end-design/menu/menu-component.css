@@ -1,0 +1,293 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #c3c3c3;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+#search-div {
+    display: flex;
+    align-items: center;
+}
+
+#menu-buttons-div {
+    display: flex;
+    align-items: center;
+}
+
+.shown-header-buttons {
+    padding: 10px 15px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#hiddenMenu, #categoryMenu {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;  /* Hidden by default */
+    background-color: #f1f1f1;
+    transition: right 0.3s ease;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+#hiddenMenu.active, #categoryMenu.active {
+    right: 0;  /* Slide in when active */
+}
+
+#hiddenMenu .close-btn, #categoryMenu .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#hiddenMenu ul, #categoryMenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#hiddenMenu li, #categoryMenu li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+#hiddenMenu li:hover, #categoryMenu li:hover {
+    background-color: #ccc;
+}
+
+.header-buttons:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+#menu-search-btn{
+    background-color: #92ebeb; 
+}
+
+#menu-search-btn:hover{
+    background-color: #d1ffff; 
+    transition: 0.5s;
+}
+
+#menu-profile-btn{
+    background-color: #ffffff;
+}
+
+#menu-wishlist-btn{
+    background-color: #f4777d;
+}
+
+#menu-products-btn{
+    background-color: #ffc90e;
+}
+
+#menu-orders-btn{
+    background-color: #fff200;
+}
+
+#menu-cart-btn{
+    background-color: #98e77f;
+}
+
+#menu-back-btn{
+    background-color: #d2f72f;
+}
+
+#menu-login-btn{
+    background-color: #c8bfe7;
+}
+
+#menu-logout-btn{
+    background-color: #c8bfe7;
+}
+
+#menu-profile-btn:hover{
+    background-color: #e6e6e6;
+    transition: 0.5s;
+}
+
+#menu-back-btn:hover{
+    background-color: #f7ffd1;
+    transition: 0.5s;
+}
+
+#menu-wishlist-btn:hover{
+    background-color: #ffc2c5;
+    transition: 0.5s;
+}
+
+#menu-products-btn:hover{
+    background-color: #ffe99a;
+    transition: 0.5s;
+}
+
+#menu-orders-btn:hover{
+    background-color: #fffba9;
+    transition: 0.5s;
+}
+
+#menu-cart-btn:hover{
+    background-color: #d3ffc6;
+    transition: 0.5s;
+}
+
+#menu-login-btn:hover{
+    background-color: #ede9ff;
+    transition: 0.5s;
+}
+
+#menu-logout-btn:hover{
+    background-color: #ede9ff;
+    transition: 0.5s;
+}
+
+#menu-search-input{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    width: 30vw;
+    font-size: 1rem;
+    border-radius: 50px;
+}
+
+#hidden-menu-search-input{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    width: 30vw;
+    font-size: 1rem;
+    border-radius: 50px;
+}
+
+#hidden-search-div{
+    background-color: #eaeaea;
+    padding: 5px ;
+    display: flex;
+    justify-content: center; /* Centers the input and button horizontally */
+    align-items: center; /* Centers the input and button vertically */
+    gap: 10px; /* Adds some space between the input and button */
+}
+
+.hiddenButtons{
+    display: none;
+    padding: 2px 5px; /* Smaller padding for a compact look */
+    border: 1px solid #ddd; /* Lighter border for a subtle look */
+    font-size: 0.9rem; /* Smaller font size for a lighter appearance */
+    border-radius: 25px; /* Rounded corners */
+    color: #333; /* Dark text color for visibility */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid #000000; /* Light blue border */
+    background-color: #ffffff; /* Light blue background */
+}
+
+#hidden-search-div{
+    display: none;
+}
+
+#hidden-menu-search-btn{
+    padding: 2px 5px; /* Smaller padding for a compact look */
+    border: 1px solid #ddd; /* Lighter border for a subtle look */
+    font-size: 0.9rem; /* Smaller font size for a lighter appearance */
+    border-radius: 25px; /* Rounded corners */
+    color: #333; /* Dark text color for visibility */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid #000000; /* Light blue border */
+    background-color: #ffffff; /* Light blue background */
+}
+
+#categories{
+    display: flex;
+    background-color: #eaeaea;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories-buttons{
+    margin: 0 20px;
+    padding: 5px 15px;
+    background-color: transparent; /* Initially transparent background */
+    border: none; /* Initially transparent background */
+    font-size: 0.9rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and color */
+}
+
+.categories-buttons:hover{
+    background-color: rgb(202, 202, 202); /* Initially transparent background */
+}
+
+@media (max-width: 1440px) {
+    .header-buttons{
+        font-size: 10px;
+    }
+    #logo-div h2{
+        font-size: 15px;
+    }
+    #menu-search-input{
+        width: 20vw;
+    }
+    #logo-div{
+        flex: 0;
+    }
+}
+
+@media (max-width: 1223px) {
+    .header-buttons {
+        padding: 7px 10px;
+    }
+    #menu-buttons-div h4{
+        font-size: 15px;
+    }
+    .hiddenButtons{
+        display: block;
+    }
+    .shown-header-buttons{
+        display:none;
+    }
+    #hidden-search-div{
+        display: flex;
+    }
+    #search-div{
+        display: none;
+    }
+    #categories{
+        display: none;
+    }
+}
+
+@media (max-width: 760px) {
+    #menu-buttons-div h4{
+        font-size: 10px;
+    }
+    #logo-div h2{
+        font-size: 10px;
+    }
+    #menu-header{
+        gap: 10px;
+    }
+}

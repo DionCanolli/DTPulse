@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu-component.css">
+</head>
+<body>
+    <header id="menu-header">
+        <div id="logo-div">
+            <h2>DTPulse</h2>
+        </div>
+        <div id="search-div">
+            <input type="text" id="menu-search-input">
+            <button class="shown-header-buttons" id="menu-search-btn">Search</button>
+        </div>
+        <button class="hiddenButtons" onclick="toggleHiddenMenu()" style="color: black;">Menu</button>
+        <button class="hiddenButtons" onclick="toggleCategoryMenu()" style="color: black;">Categories</button>
+        <button class="hiddenButtons" style="color: black;">Back</button>
+
+        <div id="menu-buttons-div">
+            <h4>Welcome Dion</h4>
+            <button class="shown-header-buttons" id="menu-profile-btn">Profile</button>
+            <button class="shown-header-buttons" id="menu-wishlist-btn">Wishlist</button>
+            <button class="shown-header-buttons" id="menu-products-btn">Products</button>
+            <button class="shown-header-buttons" id="menu-orders-btn">Orders</button>
+            <button class="shown-header-buttons" id="menu-cart-btn">Cart</button>
+            <button class="shown-header-buttons" id="menu-back-btn">Back</button>
+            <button class="shown-header-buttons" id="menu-login-btn">Login</button>
+            <button class="shown-header-buttons" id="menu-logout-btn">Logout</button>
+        </div>
+    </header>
+
+    <div id="categories">
+        <button class="categories-buttons">All</button>
+        <button class="categories-buttons">Computer</button>
+        <button class="categories-buttons">Laptop</button>
+        <button class="categories-buttons">Smartphone</button>
+        <button class="categories-buttons">Components & Hardware</button>
+        <button class="categories-buttons">Accessories</button>
+    </div>
+
+    <div id="hidden-search-div">
+        <input type="text" id="hidden-menu-search-input">
+        <button class="hidden-shown-header-buttons" id="hidden-menu-search-btn">Search</button>
+    </div>
+
+    <nav id="hiddenMenu">
+        <button class="close-btn" onclick="toggleHiddenMenu()">✖</button>
+        <ul>
+            <li>Profile</li>
+            <li>Wishlist</li>
+            <li>Products</li>
+            <li>Orders</li>
+            <li>Cart</li>
+            <li>Login</li>
+            <li>Logout</li>
+        </ul>
+    </nav>
+
+    <nav id="categoryMenu">
+        <button class="close-btn" onclick="toggleCategoryMenu()">✖</button>
+        <ul>
+            <li>All</li>
+            <li>Computer</li>
+            <li>Laptop</li>
+            <li>Smartphone</li>
+            <li>Components & Hardware</li>
+            <li>Accessories</li>
+        </ul>
+    </nav>
+    
+    <script>
+        function toggleHiddenMenu() {
+            var hiddenMenu = document.getElementById('hiddenMenu');
+            hiddenMenu.classList.toggle('active'); 
+        }
+
+        function toggleCategoryMenu() {
+            var hiddenMenu = document.getElementById('categoryMenu');
+            hiddenMenu.classList.toggle('active'); 
+        }
+    </script>
+</body>
+</html>

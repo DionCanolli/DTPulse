@@ -1,0 +1,29 @@
+#paginationPart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#footer{
+    display: flex;
+    flex-direction: column;
+}
+
+#footer p{
+    align-self: flex-end;
+}
+
+#footer button{
+    background-color: #1b9191; 
+    color: white;              
+    padding: 10px 20px;        
+    border: none;              
+    border-radius: 8px;        
+    font-size: 12px;           
+    font-weight: bold;         
+    text-transform: uppercase; 
+    cursor: pointer;           
+    transition: background-color 0.3s, box-shadow 0.3s; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
